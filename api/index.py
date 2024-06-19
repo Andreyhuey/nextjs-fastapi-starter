@@ -1,4 +1,4 @@
-from fastapi import FastAPI, status
+from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -6,6 +6,6 @@ app = FastAPI()
 def hello_world():
     return {"message": "Hello World"}
 
-@app.get("/api/hi", status_code=status.HTTP_200_OK)
+@app.get("/api/hi")
 def hi():
     return {"message": "testing"}
